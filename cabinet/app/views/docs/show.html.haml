@@ -1,2 +1,6 @@
 %h1= @doc.title
 %p= @doc.content
+
+= link_to "Show docs", docs_path
+= link_to "Update doc", edit_doc_path(@doc)
+= link_to "Delete doc", doc_path(@doc), method: :delete, data: {confirm: "Dumb enough to delete?"}
